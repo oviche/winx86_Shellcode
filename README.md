@@ -21,7 +21,7 @@ git clone https://github.com/oviche/winx86_Shellcode.git
 ```
 masmPath= //your masm32 path
 ```
-3. Open **shellcode.asm** and change **windows.inc** path based on the location of masm32 in your local machine .also, you can change the target ip and target port (default port = 4444 , default ip = 127.0.0.1):
+3. Open **shellcode.asm** and change **windows.inc** path based on the location of masm32 in your local machine. Also, you can change the target ip and target port (default port = 4444 , default ip = 127.0.0.1):
 ```
 include masm32path\include\windows.inc
 ```
@@ -36,12 +36,12 @@ nmake makefile.txt
 python3 shellcode_extractor.py shellcode.exe 
 ```
 
-6. open **CMD** and make **netcat** listen on port what you have specified in shellcode.asm (the default is 4444):
+6. Open **CMD** and make **netcat** listen on port what you have specified in shellcode.asm (the default is 4444):
 ```
 nc -lvp 4444
 ```
 
-7. create c or c++ project and disable **data execution prevention (DEP)** then write the following code then execute it:
+7. Create c or c++ project and disable **data execution prevention (DEP)** then write the following code then execute it:
 
 ```
 char shellcode[] = "";	// copy shellcode from shellcodebytes.txt
@@ -51,6 +51,6 @@ memcpy(ptr, shellcode, sizeof(shellcode));
 ```
 
 ### Testing environment
-* The code was tested on **windows10**.
+* The code was tested on **windows 10**.
 
 
