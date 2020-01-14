@@ -25,8 +25,6 @@ ans = byte_list[start+1:end]
 print("Length of shellcode is : ",len(ans),"bytes")
 
 for i in range(0, len(ans)):
-    if(ans[i]==0 or ans[i]== 0xa):
-        count+=1
     wfile.write('\\x'+hex(ans[i]).replace("0x",""))
 wfile.close()
 
