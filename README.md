@@ -15,7 +15,7 @@ These instructions will get you a copy of the POC files on your local system for
 ### Usage
 1.   Clone the repository:
 ```
-git clone https://username@bitbucket.org/teamsinspace/documentation-tests.git
+git clone https://github.com/oviche/winx86_Shellcode.git
 ```
 2. Open **makefile.txt** and change **masmPath** based on the location of masm32 in your local machine:
 ```
