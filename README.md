@@ -33,7 +33,7 @@ nmake makefile.txt
 ```
 5. To extract the shellcode bytes from **shellcode.exe** into output file called **shellcodebytes.txt** execute the following:
 ```
-python3 shellcode_extractor.py shellcode.asm 
+python3 shellcode_extractor.py shellcode.exe 
 ```
 
 6. open **CMD** and make **netcat** listen on port what you have specified in shellcode.asm (the default is 4444):
