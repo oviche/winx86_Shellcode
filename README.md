@@ -21,7 +21,7 @@ git clone https://github.com/oviche/winx86_Shellcode.git
 ```
 masmPath= //your masm32 path
 ```
-3. Open **shellcode.asm** and change **windows.inc** path based on the location of masm32 in your local machine:
+3. Open **shellcode.asm** and change **windows.inc** path based on the location of masm32 in your local machine .also, you can change the target ip and target port (default port = 4444 , default ip = 127.0.0.1):
 ```
 include masm32path\include\windows.inc
 ```
