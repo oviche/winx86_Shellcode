@@ -1,0 +1,21 @@
+#add your masm32 path
+masmPath = C:\masm32  
+ml = $(masmPath)\bin\ml.exe
+MLflags = /c /coff
+link = $(masmPath)\bin\link.exe
+LINKflags = /SUBSYSTEM:CONSOLE
+MLoutputfile = shellcode.obj
+LINKoutputfile = shellcode.exe
+
+$(LINKoutputfile):$(MLoutputfile)
+		$(link) $(LINKflags) $(MLoutputfile)
+		del *.obj
+
+$(MLoutputfile) : shellcode.asm
+		$(ml) $(MLflags) shellcode.asm
+
+
+#nmake /f makefile.txt clean    ; to execute clean 
+clean:
+ del *.exe
+ 
