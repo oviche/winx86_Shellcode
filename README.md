@@ -1,5 +1,5 @@
 # WinX86 Shellcode (Reverse Shell)
-This POC was done for educational purpose and walkthrough to understand how windows shellcode is work and get insight about how to extract windows APIs from Dlls.
+This POC was done for educational purpose and walkthrough to understand how windows shellcode is working and get insight about how to extract windows APIs from Dlls.
 
 ## Getting Started
 
