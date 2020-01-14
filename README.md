@@ -41,7 +41,7 @@ python3 shellcode_extractor.py shellcode.asm
 nc -lvp 4444
 ```
 
-7. create c or c++ project and disable **data execution prevention (DEP)** then write the following code:
+7. create c or c++ project and disable **data execution prevention (DEP)** then write the following code then execute it:
 
 ```
 char shellcode[] = "";	// copy shellcode from shellcodebytes.txt
