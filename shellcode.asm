@@ -3,7 +3,7 @@
 option casemap:none
 
 
-include C:\masm32\include\windows.inc
+include C:\masm32\include\windows.inc ;change the path to windows.inc path in your masm32 folder
 
 
 
