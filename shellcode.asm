@@ -201,7 +201,7 @@ Mov sockAdd.sin_port, Dx
 Mov Dl, 1H ; 4th byte in ip address in hexa
 Shl Edx, 8
 Mov Dl, Bl ; 3th byte in ip address in hexa bl=0
-Shl Edx, 8
+Shl Edx, 8                                             ; ip = 127.0.0.1                            
 Mov Dl, Bl; 2nd byte in ip address in hexa
 Shl Edx, 8
 Mov Dl, 7fH; 1st byte in ip address
